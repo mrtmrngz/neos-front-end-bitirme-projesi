@@ -1,0 +1,296 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+    }
+
+    .navbar i {
+        @apply text-[20px] sm:text-[30px] cursor-pointer text-white;
+    }
+
+    .navLinks li {
+        @apply text-white relative pb-1 after:bg-orange-400;
+    }
+
+
+    .navLinks li::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0.175rem;
+        left: 0;
+        bottom: 0;
+        transform: scale(0,1);
+        transform-origin: 0% 100%;
+        transition: all .3s ease-in;
+    }
+
+    .navLinks li:hover::after {
+        transform: scale(1, 1);
+    }
+
+    .navLinksWrapper.sideBarOpenAnimation {
+        animation: sideBarOpen .3s forwards ease-in-out;
+    }
+
+    @keyframes sideBarOpen {
+        from {
+            position: absolute;
+            left: -350px;
+        }
+
+        to {
+            left: 0;
+        }
+    }
+
+    .searchToggle.active ~ .searchField {
+        bottom: -85px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .searchField::before {
+        content: '';
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        top: -4px;
+        right: 14px;
+        background-color: #3B82F6;
+        transform: rotate(-45deg);
+        z-index: -1;
+    }
+
+    .searchField i {
+        color: #3B82F6;
+    }
+
+    .searchToggle i.cancel {
+        display: none;
+        pointer-events: none;
+    }
+
+    .searchToggle.active i.cancel {
+        display: block;
+        pointer-events: auto;
+    }
+
+    .searchToggle.active i.search {
+        display: none;
+        pointer-events: none;
+    }
+
+    .shoppingBagField.shoppingBagOpenAnimation {
+        animation: shoppingBagOpen .3s forwards ease-in-out;
+    }
+
+    @keyframes shoppingBagOpen {
+        from {
+            position: absolute;
+            right: -350px;
+        }
+
+        to {
+            right: 0;
+        }
+    }
+
+    .slide {
+        @apply absolute inset-0 opacity-0 transition-opacity duration-200 delay-200;
+    }
+
+    .slide[data-active] {
+        @apply opacity-[1] delay-0;
+    }
+
+    .slide > img {
+        @apply block w-full h-full object-center;
+    }
+
+    .carousel-button {
+        @apply absolute top-1/2 transform -translate-y-1/2 z-[2] text-5xl text-[rgba(255,255,255,0.5)] bg-[rgba(0,0,0,0.3)] py-[.3rem] px-[.5rem] rounded-xl hover:text-white focus:bg-[rgba(0,0,0,0.5)] focus:outline focus:outline-1 focus:outline-white;
+    }
+
+    .features i {
+        @apply text-4xl bg-blue-500 text-white py-3 px-4 rounded-[50%] mb-2;
+    }
+    
+    .feature {
+        @apply text-center;
+    }
+
+    .feature h2 {
+        @apply uppercase font-bold  text-xl my-3;
+    }
+
+    .feature p {
+        letter-spacing: 3;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+
+    .card .img img {
+        @apply w-[115px] h-[115px] object-cover object-center rounded-[50%] pointer-events-none;
+    }
+
+    .card {
+        @apply bg-[#e3e3e3] rounded-xl h-[350px] flex flex-col items-center justify-center pb-4 gap-6 px-10 text-center;
+    }
+
+    .commentCarousel {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 3) - 12px);
+        gap: 16px;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .topCard {
+        @apply flex justify-center items-center gap-3;
+    }
+
+    .commentCarouselWrapper i {
+        @apply w-[50px] h-[50px] bg-white text-black text-center leading-[50px] rounded-[50%] cursor-pointer absolute top-1/2 text-xl transform -translate-y-1/2;
+    }
+
+    .commentCarousel.dragging {
+        @apply scroll-auto;
+    }
+
+    .commentCarousel.no-transition {
+        @apply scroll-auto;    
+    }
+
+    .commentCarousel.dragging .card {
+        @apply cursor-grab select-none;
+    }
+
+    .content {
+        @apply flex flex-col justify-center items-center gap-3;
+    }
+    
+    .content i{
+        @apply text-3xl bg-orange-500 text-white p-3 rounded-[50%] text-center;
+    }
+
+    .content h2 {
+        @apply text-white text-2xl;
+    }
+
+    .content h3 {
+        @apply text-xl text-slate-300;
+    }
+
+    .button-wrapper {
+        @apply flex flex-col md:flex-row gap-10 md:gap-0 justify-between items-center my-10;
+    }
+
+    .button-wrapper a {
+        @apply text-2xl md:text-4xl bg-blue-500 text-white py-3 px-7 rounded-xl transition-all duration-[.3s] hover:bg-orange-500 tracking-[5px];
+    }
+
+    footer li a {
+        @apply text-white;
+    }
+
+    .social i {
+        @apply text-white cursor-pointer hover:opacity-80 text-3xl;
+    }
+
+
+
+    /*! PRODUCTS  */
+
+    .listProduct .item img {
+        width: 90%;
+        object-fit: contain;
+    }
+
+    .listProduct .item {
+        @apply bg-[#fafafa] rounded-2xl flex flex-col justify-center items-center gap-2 p-[30px] cursor-pointer;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: all .5s ease-in-out;
+    }
+
+    .listProduct .item:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+
+    .listProduct .item h2 {
+        @apply text-lg font-bold text-gray-500 uppercase;
+    }
+
+    .listProduct .item .price {
+        @apply my-2 tracking-[2px];
+    }
+
+    .listProduct .item .addCard {
+        @apply w-full bg-blue-500 text-white px-5 py-2 rounded-xl transition-all duration-300 hover:bg-orange-500;
+    }
+
+    .listCard .item img {
+        @apply w-full object-cover;
+    }
+
+    .listCard .item {
+        display: grid;
+        grid-template-columns: 70px 70px 60px 1fr;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+        color: #fff;
+    }
+
+    .listCard .item .quantity span {
+        @apply inline-block w-[25px] h-[25px] bg-orange-500 text-white rounded-[50%] cursor-pointer;
+    }
+
+    .listCard .item .quantity span:nth-child(2) {
+        @apply bg-transparent;
+    }
+
+    .listCard .item:nth-child(even) {
+        @apply bg-blue-400;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media screen and (max-width:900px) {
+        .commentCarousel {
+            grid-auto-columns: calc((100% / 2) - 9px);
+        }
+    }
+    
+    @media screen and (max-width:600px) {
+        .commentCarousel {
+            grid-auto-columns: 100%;
+        }
+    }
+}

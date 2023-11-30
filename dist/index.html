@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./output.css">
+    <title>TechStore</title>
+</head>
+<body class="">
+    
+
+    <nav class="navbar bg-blue-500 h-20 w-full z-[85] top-0">
+        <div class="container mx-auto flex w-full h-full justify-between items-center z-[85] px-10 md:px-0">
+            <div class="sideBarOpenIcon md:hidden">
+                <i class="fa-solid fa-bars sidebarOpen"></i>
+            </div>
+
+            <div class="logo">
+                <a href="./index.html" class="text-lg sm:text-[21px] text-white">
+                    <span class="text-orange-400">Tech</span>Store
+                </a>
+            </div>
+
+            <div class="navLinksWrapper absolute h-screen w-[100px] sm:w-[250px] bg-blue-400 top-0 left-[-350px] md:static md:bg-transparent md:w-0 transition-all duration-[.3s] z-30">
+                <ul class="navLinks relative flex flex-col md:flex-row justify-center items-center w-full h-full gap-16 md:gap-10 text-[12px] sm:text-[17px]">
+                    <li><a href="./computer.html">Computer</a></li>
+                    <li><a href="./phone.html">Phone</a></li>
+                    <li><a href="./headset.html">Headset</a></li>
+                    <i class="fa-solid fa-xmark absolute top-2 right-2 md:hidden sideBarCloseIcon"></i>
+                </ul>    
+            </div>
+            <div class="searchBox-accountDetail-shoppingCard flex sm:gap-5">
+
+                <div class="searchBox relative">
+                    <div class="searchToggle">
+                        <i class="fa-solid fa-xmark cancel hidden transition-all duration-[.3s] ease-linear"></i>
+                        <i class="fa-solid fa-magnifying-glass search transition-all duration-[.3s] ease-linear mr-3 md:mr-0"></i>
+                    </div>
+                    <div class="searchField bg-blue-500 w-[150px] sm:w-[250px] h-[50px] absolute bottom-[-80px] right-[-8px] flex items-center p-[3px] rounded-md pointer-events-none transition-all duration-[.3s] ease-linear opacity-0 z-30">
+                        <input type="text" placeholder="Search..." class="w-full h-full border-none outline-none py-0 pr-[45px] pl-[15px] rounded text-sm">
+                        <i class="fa-solid fa-magnifying-glass absolute right-[15px] cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="shoppingBag z-30">
+
+                    <div class="shoppingBagToggle relative">
+                        <i class="fa-solid fa-bag-shopping shoppingBagOpenIcon"></i>
+                        <span id="quantity" class="text-black font-bold absolute right-[7px] top-[6px] sm:right-[11px] sm:top-[12px] text-xs pointer-events-none">0</span>
+                    </div>
+
+                    <div class="shoppingBagField hidden bg-blue-400 h-screen absolute top-0 right-[-350px] w-[150px] sm:w-[350px]">
+                        <i class="fa-solid fa-xmark top-2 right-2 shoppingBagCloseIcon ml-2 mt-3"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+
+    <header class="h-[87vh] w-full">
+        <div data-carousel class="carousel w-full h-full relative">
+            <button data-carousel-button="prev" class="carousel-button prev left-3"><i class="fa-solid fa-arrow-left"></i></button>
+            <button data-carousel-button="next" class="carousel-button next right-3"><i class="fa-solid fa-arrow-right"></button>
+
+            <ul data-slides class="m-0 p-0">
+                <li data-active class="slide"><img src="../src/img/discountImg/1.jpg" alt=""></li>
+                <li class="slide"><img src="../src/img/discountImg/2.jpg" alt=""></li>
+                <li class="slide"><img src="../src/img/discountImg/3.jpg" alt=""></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="tracking-[5px]">
+        <!--? Features START -->
+        <section class="features w-full bg-slate-200 text-sm">
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-4 sm:px-0 py-10 gap-6 w-full justify-items-center content-center">
+                <div class="feature">
+                    <i class="fa-regular fa-user"></i>
+                    <h2>Register</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis, iste soluta harum quasi doloribus voluptate sunt debitis, optio omnis consequatur. Omnis ipsa sed totam voluptatum ab perspiciatis velit quae ducimus alias veritatis aliquam atque cupiditate placeat, illum voluptatem enim?</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-gift"></i>
+                    <h2>Select the product you want to buy</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis, iste soluta harum quasi doloribus voluptate sunt debitis, optio omnis consequatur. Omnis ipsa sed totam voluptatum ab perspiciatis velit quae ducimus alias veritatis aliquam atque cupiditate placeat, illum voluptatem enim?</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <h2>Make your payment</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis, iste soluta harum quasi doloribus voluptate sunt debitis, optio omnis consequatur. Omnis ipsa sed totam voluptatum ab perspiciatis velit quae ducimus alias veritatis aliquam atque cupiditate placeat, illum voluptatem enim?</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h2>Be Happy</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis, iste soluta harum quasi doloribus voluptate sunt debitis, optio omnis consequatur. Omnis ipsa sed totam voluptatum ab perspiciatis velit quae ducimus alias veritatis aliquam atque cupiditate placeat, illum voluptatem enim?</p>
+                </div>
+            </div>
+        </section>
+        <!--! Features END -->
+
+        <!--? Comment Section START -->
+        <section id="comments" class="w-screen px-10 md:px-0">
+            <div class="commentCarouselWrapper container mx-auto w-full relative py-10">
+                <div class="comment-header">
+                    <h2 class="text-center my-8 text-4xl text-gray-500 uppercase">nice comments from our users</h2>
+                </div>
+                <i id="left" class="fa-solid fa-arrow-left left-[-20px]"></i>
+                <ul class="commentCarousel">
+                    <li class="card">
+                        <div class="topCard">
+                            <div class="img"><img src="../src/img/commentImg/img-1.jpg"></div>
+                            <h2>Olivia Dunham</h2>
+                        </div>
+                        <div class="cardBody">
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellendus harum facilis quia.</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="topCard">
+                            <div class="img"><img src="../src/img/commentImg/img-2.jpg"></div>
+                            <h2>John Reese</h2>
+                        </div>
+                        <div class="cardBody">
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellendus harum facilis quia.</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="topCard">
+                            <div class="img"><img src="../src/img/commentImg/img-3.jpg"></div>
+                            <h2>Samantha Groves</h2>
+                        </div>
+                        <div class="cardBody">
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellendus harum facilis quia.</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="topCard">
+                            <div class="img"><img src="../src/img/commentImg/img-4.jpg"></div>
+                            <h2>Harold Finch</h2>
+                        </div>
+                        <div class="cardBody">
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellendus harum facilis quia.</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="topCard">
+                            <div class="img"><img src="../src/img/commentImg/img-5.jpg"></div>
+                            <h2>Joss Carter</h2>
+                        </div>
+                        <div class="cardBody">
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellendus harum facilis quia.</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="topCard">
+                            <div class="img"><img src="../src/img/commentImg/img-6.jpg"></div>
+                            <h2>Lionel Fusco</h2>
+                        </div>
+                        <div class="cardBody">
+                            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque repellendus harum facilis quia.</p>
+                        </div>
+                    </li>
+                </ul>
+                <i id="right" class="fa-solid fa-arrow-right right-[-20px]"></i>
+            </div>
+        </section>
+        <!--!Comment Section END  -->
+
+        <!--? COUNTER SECTION START  -->
+        <section id="counter-section" class="w-full bg-blue-500 my-6 py-10 px-10 md:px-0">
+            <div class="container mx-auto flex flex-col gap-9 md:flex-row md:gap-[400px] justify-center items-center">
+                <div class="content">
+                    <div class="counter-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <h2>9999+</h2>
+                    <h3>User</h3>
+                </div>
+                <div class="content">
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                    <h2>6325</h2>
+                    <h3>Orders</h3>
+                </div>
+                <div class="content">
+                    <div class="counter-icon">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h2>6325+</h2>
+                    <h3>Happy Customers</h3>
+                </div>
+            </div>
+        </section>
+        <!--! COUNTER SECTION END  -->
+
+        <!--? LİNKS START  -->
+        <section id="links" class="mt-6 mb-24 px-10 md:px-0">
+            <div class="container mx-auto">
+                <div class="links-header">
+                    <h2 class="text-center my-8 text-4xl text-gray-500 uppercase">Order Now</h2>
+                </div>
+                <div class="button-wrapper">
+                    <a href="./computer.html">Computer</a>
+                    <a href="./phone.html">Phone</a>
+                    <a href="./headset.html">Headset</a>
+                </div>
+            </div>
+        </section>
+        <!--! LİNKS END  -->
+    </main>
+
+    <footer class="w-full bg-black px-10 md:px-0 py-5">
+        <div class="container mx-auto w-full h-full flex flex-col md:flex-row md:justify-between  justify-center items-center">
+            <div class="flex items-center w-full h-full">
+                <ul class="site-map flex flex-col gap-6">
+                    <li><a href="./computer.html">Computer</a></li>
+                    <li><a href="./phone.html">Phone</a></li>
+                    <li><a href="./headset.html">Headset</a></li>
+                </ul>
+            </div>
+            <div class="flex items-center w-full h-full">
+                <ul class="contact flex flex-col gap-2 items-center justify-center">
+                    <li><a href="#">+905550000000</a></li>
+                    <li><input type="email" placeholder="example@gmail.com"></li>
+                    <ul class="flex gap-10">
+                        <li class="social"><i class="fa-brands fa-x-twitter"></i></i></li>
+                        <li class="social"><i class="fa-brands fa-youtube"></i></li>
+                        <li class="social"><i class="fa-brands fa-instagram"></i></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="flex items-center w-full h-full">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11927.196998451425!2d26.616501!3d41.6384705!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b33ab1c99c0237%3A0x7f4ee638ef487c62!2sTunca%20MYO%20(Uzaktan%20E%C4%9Fitim)!5e0!3m2!1str!2str!4v1701336754631!5m2!1str!2str" width="400" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/0c45c82954.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

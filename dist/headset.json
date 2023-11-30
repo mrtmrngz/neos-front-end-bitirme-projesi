@@ -1,0 +1,26 @@
+[
+    {
+        "id":0,
+        "name":"Corsair Void Pro",
+        "image": "corsair-void-pro.jpg",
+        "price":2500
+    },
+    {
+        "id":1,
+        "name":"Jbl Tune 660NC",
+        "image": "jbl-tune-660nc.jpg",
+        "price":4350
+    },
+    {
+        "id":2,
+        "name":"Logitech G935",
+        "image": "loigtech-g935.jpg",
+        "price":6000
+    },
+    {
+        "id":3,
+        "name":"Sennheiser HD400S",
+        "image": "sennheiser-hd400s.jpg",
+        "price":9000
+    }
+]
